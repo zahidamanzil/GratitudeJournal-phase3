@@ -1,0 +1,691 @@
+
+.auth-form-container {
+    max-width: 420px;
+    margin: 6rem auto;
+    background-color: #e8f5e9; /* light pastel green */
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+/* Heading */
+.auth-form-container h2 {
+    color: #2e7d32; /* deep green */
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Labels */
+.auth-form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #33691e;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+/* Input fields */
+.auth-form-container input[type="text"],
+.auth-form-container input[type="email"],
+.auth-form-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c8e6c9;
+    border-radius: 10px;
+    background-color: #f1f8f4;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.auth-form-container input:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 6px rgba(102, 187, 106, 0.4);
+}
+
+/* Button */
+.auth-form-container button[type="submit"] {
+    margin-top: 1.8rem;
+    width: 100%;
+    padding: 12px;
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.auth-form-container button[type="submit"]:hover {
+    background-color: #4caf50;
+    transform: scale(1.03);
+}
+
+/* Paragraph below the form */
+.auth-form-container p {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #33691e;
+}
+
+/* Link inside the paragraph */
+.auth-form-container p a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form-container p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#38573925; 
+    
+}
+
+
+
+
+header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 5px 10px;
+    background-color: #f7f7f7; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+#logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 50px; 
+    height: 50px; /* Same as width for a perfect circle */
+    border-radius: 50%; /* Makes it circular */
+    border: 2px solid #ddd; 
+    object-fit: cover; /* Ensures the image fits inside the circle */
+}
+
+
+nav ul {
+    display:flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 50px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #0f5f13c2; 
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction:column; 
+        align-items: flex-start; 
+    }
+
+    nav ul {
+        flex-direction: row; 
+    }
+
+    nav ul li {
+        margin-left: 0; 
+        margin-bottom: 10px; 
+    }
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+textarea, select, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+textarea:focus, select:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #236e26e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2d7a31c9;
+}
+
+button.cancel {
+    background-color: #f3b0ab42; 
+}
+
+button.cancel:hover {
+    background-color: #e53935;
+}
+
+
+#savedEntries ul {
+    list-style: none;
+    padding: 0;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+#savedEntries ul li {
+    background-color: #eeeeee; 
+    border: 1px solid #ddd;
+    border-radius: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 15px 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+
+ul li button {
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    transition: background-color 0.3s;
+}
+
+ul li button:hover {
+    background-color: #e53835af;
+}
+
+
+ul li button i {
+    font-size: 14px;
+}
+
+
+
+#welcomeMessage {
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+    color: #253f26;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+
+#welcomeMessage::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #000000;
+    margin: 10px auto;
+}
+#welcomeDescription {
+    font-size: 2rem;
+    line-height: 1.8;
+    color: rgb(12, 12, 12);
+    font-family: "Georgia", serif;
+    font-style: italic;
+    margin-bottom: 6cap;
+    
+    
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #welcomeMessage {
+        font-size: 2.5rem;
+    }
+
+    #welcomeDescription {
+        font-size: 1rem;
+        margin: 10px 15px;
+    }
+}
+
+
+
+#slideshow {
+    position: relative;
+    max-width: 100%; /* Full width */
+    height: 600px; 
+    overflow: hidden; /* Hide overflow */
+    margin: 30px auto; /* Add space between the paragraph and slideshow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the container */
+    opacity: 0; /* Start hidden */
+    transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+.slide.active {
+    opacity: 1; /* Show the active slide */
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    #slideshow {
+        height: 300px; /* Fixed height for mobile view or smaller screens */
+    }
+    #slideshow .slide {
+        object-fit: cover; /* Ensure images fit within the container */
+    }
+}
+
+#calendarContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days */
+    gap: 10px;
+    padding: 20px;
+    background-image: url(./assets/images/background.jpg);  
+    border-radius: 10px;
+}
+
+#calendarContainer div {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#calendarContainer div:hover:not(.selected) {
+    background-color: #e0ffe0;
+}
+
+.current-day {
+    color: rgb(187, 42, 42);
+    font-weight: bold;
+    border: 2px solid #388E3C;
+}
+#calendarContainer div.selected {
+    background-color: #ffd9006e;
+    color: black;
+    font-weight: bold;
+}
+#selectedDateEntries {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#selectedDateEntries h3 {
+    margin-top: 0;
+    color: #375538d2;
+}
+
+#entriesForDateList {
+    list-style: none;
+    padding: 0;
+}
+
+#entriesForDateList li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calendarHeader button {
+    background-color: #375538;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#calendarHeader button:hover {
+    background-color: #2d472f;
+}
+
+#currentMonthYear {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#dayNames {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for 7 days */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#dayNames div {
+    padding: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+#insights {
+    margin-top: 5rem;
+    padding: 15px;
+    background-color: #f9f9f975;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#insights h3 {
+    margin-top: 0;
+    color: #375538f8;
+}
+
+#categoryAnalysis {
+    background-image: url(./assets/images/planGreen1.jpg); 
+    background-size: cover; /* Ensure the image covers the entire dropdown */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    
+    font-weight: bold; 
+    border: 2px solid #ccc; 
+    padding: 10px; 
+}
+
+#categoryList {
+    list-style: none;
+    padding: 0;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between cards */
+}
+
+#categoryList li {
+background-color: #eeeeee00; 
+    border: 1px solid #ddd;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px 20px; /* Inner padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+footer {
+    background-color: #375538ee;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+footer ul {
+    align-items: flex-end;
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    #calendarContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+  
+
+.landing-body {
+    background: #e6f4e6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.landing-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #ffffffbb;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 5rem auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+.landing-section h2 {
+    color: #2e4d2e;
+    font-size: 2.5rem;
+}
+
+.landing-section p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.register {
+    background-color: #a6d9a6;
+    color: #204220;
+}
+
+.register:hover {
+    background-color: #8fcf8f;
+}
+
+.login {
+    background-color: #d0f0d0;
+    color: #375538;
+}
+
+.login:hover {
+    background-color: #bfe8bf;
+}
+
+.highlight {
+    color: #497849;
+    font-weight: bold;
+}
+
+/* Style for the contact page */
+.contact-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #4caf50;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form-container label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.contact-form-container textarea {
+    resize: vertical; /* Allows the user to resize the text area vertically */
+}
+
+.contact-form-container input[type="text"]:focus,
+.contact-form-container input[type="email"]:focus,
+.contact-form-container textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.contact-form-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #45a049;
+}
+
+.contact-form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-form-container p a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.contact-form-container p a:hover {
+    text-decoration: underline;
+}
